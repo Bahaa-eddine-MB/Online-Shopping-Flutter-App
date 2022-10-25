@@ -6,6 +6,7 @@ import 'package:products_application/Home/SearchPage.dart';
 import 'package:products_application/Product/AddProduct.dart';
 import 'package:products_application/Product/ProductCard.dart';
 import 'package:products_application/Profile/ProfilePage.dart';
+import 'package:products_application/Themes/themes.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-int current = 1;
+int current = 0;
 
 class _HomePageState extends State<HomePage> {
   @override
@@ -28,6 +29,7 @@ class _HomePageState extends State<HomePage> {
       'HardWare'
     ];
     return Scaffold(
+      
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.to(() => const AddProduct());
@@ -88,16 +90,20 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               Get.to(() => const ProfilePage());
             },
-            title: const Text("first page"),
+            title: const Text("My Profile"),
             leading: const Icon(Icons.person),
           ),
           ListTile(
-            onTap: () {},
+            onTap: () {
+              Get.changeTheme(Themes.customLightTheme);
+            },
             title: const Text("second page"),
             leading: const Icon(Icons.settings),
           ),
           ListTile(
-              onTap: () {},
+              onTap: () {
+                Get.changeTheme(Themes.customDarkTheme);
+              },
               title: const Text("third page"),
               leading: const Icon(Icons.drafts_outlined)),
           ListTile(
@@ -144,7 +150,7 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      backgroundColor: Colors.grey[100],
+      //backgroundColor: Colors.grey[100],
       body: SingleChildScrollView(
         child: Column(
           children: [

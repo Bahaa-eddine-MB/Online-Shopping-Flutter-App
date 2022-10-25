@@ -14,7 +14,6 @@ class _ConfirmPasswordState extends State<ConfirmPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [

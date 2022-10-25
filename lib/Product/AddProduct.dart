@@ -10,11 +10,11 @@ class AddProduct extends StatefulWidget {
 class _AddProductState extends State<AddProduct> {
   @override
   List<String> myList = [
-    'Houses',
-    'Cars',
-    'Clothes',
-    'Books',
-    'Electrical machines',
+    'House',
+    'Car',
+    'Clothe',
+    'Book',
+    'Electrical machine',
     'HardWare'
   ];
   String? dropdownValue;
@@ -29,7 +29,6 @@ class _AddProductState extends State<AddProduct> {
           color: Colors.white,
         ),
       ),
-      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -151,6 +150,7 @@ class _AddProductState extends State<AddProduct> {
                       
                     ),
                     child: Slider(
+                      activeColor: Colors.orange,
                       inactiveColor: Colors.white,
                       min: 0,
                       divisions: 10,

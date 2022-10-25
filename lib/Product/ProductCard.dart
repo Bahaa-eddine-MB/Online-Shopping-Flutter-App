@@ -52,7 +52,7 @@ class PostCard extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text('10000000hhh00 da'),
+                    Text('1000000000 Da'),
                     SizedBox(
                       height: 10,
                     ),
@@ -61,7 +61,7 @@ class PostCard extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text('New af nigga (just kidding i m white)'),
+                    Text('New'),
                     SizedBox(
                       height: 10,
                     ),
@@ -72,7 +72,7 @@ class PostCard extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text('some bullshit never mind it haha\n(not for niggas)')
+                    Text('some description ...\nalso some text')
                   ],
                 ),
               )

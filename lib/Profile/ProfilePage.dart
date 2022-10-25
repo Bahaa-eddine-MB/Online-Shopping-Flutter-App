@@ -13,7 +13,6 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -47,7 +46,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     right: 0,
                     child: Container(
                       decoration:const  BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.transparent,
                         shape: BoxShape.circle
                       ),
                       padding:const EdgeInsets.all(4),

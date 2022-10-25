@@ -8,7 +8,6 @@ class EditProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Scaffold(
-        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -39,7 +38,7 @@ class EditProfilePage extends StatelessWidget {
                       right: 0,
                       child: Container(
                         decoration: const BoxDecoration(
-                            color: Colors.white, shape: BoxShape.circle),
+                            color: Colors.transparent, shape: BoxShape.circle),
                         padding: const EdgeInsets.all(4),
                         child: const CircleAvatar(
                             radius: 18,

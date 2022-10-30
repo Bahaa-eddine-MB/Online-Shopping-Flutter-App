@@ -8,6 +8,9 @@ import 'package:products_application/Product/ProductCard.dart';
 import 'package:products_application/Profile/ProfilePage.dart';
 import 'package:products_application/Themes/themes.dart';
 
+import '../Services/locale.dart';
+import '../main.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -18,18 +21,23 @@ class HomePage extends StatefulWidget {
 int current = 0;
 
 class _HomePageState extends State<HomePage> {
+  String? dropdownValue = sharredPrefs!.getString("codeLang") == null
+      ? Get.deviceLocale!.languageCode
+      : sharredPrefs!.getString("codeLang")!;
+
   @override
   Widget build(BuildContext context) {
+    Map<String, String> langCodeList = {"English": "en", "Français": "fr"};
+
     List<String> items = [
-      'Houses',
-      'Cars',
-      'Clothes',
-      'Books',
-      'Electrical machines',
-      'HardWare'
+      "homeItems1".tr,
+      "homeItems2".tr,
+      "homeItems3".tr,
+      "homeItems4".tr,
+      "homeItems5".tr,
+      "homeItems6".tr
     ];
     return Scaffold(
-      
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.to(() => const AddProduct());
@@ -84,33 +92,91 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const SizedBox(
-            height: 60,
+            height: 10,
+          ),
+          Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: IconButton(
+                    onPressed: () {
+                      sharredPrefs!.getBool("isDarkTheme") ?? false
+                          ? {
+                              Get.changeTheme(Themes.customLightTheme),
+                              setState(() {
+                                sharredPrefs!.setBool("isDarkTheme", false);
+                              })
+                            }
+                          : {
+                              Get.changeTheme(Themes.customDarkTheme),
+                              setState(() {
+                                sharredPrefs!.setBool("isDarkTheme", true);
+                              })
+                            };
+                    },
+                    icon: sharredPrefs!.getBool("isDarkTheme") ?? false
+                        ? const Icon(Icons.dark_mode)
+                        : const Icon(Icons.light_mode)),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey, width: 1),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(10))),
+                  child: DropdownButton(
+                    underline: const SizedBox(),
+                    isExpanded: true,
+                    icon: const Icon(Icons.arrow_drop_down),
+                    value: dropdownValue,
+                    items: langCodeList
+                        .map((key, value) {
+                          return MapEntry(
+                              key,
+                              DropdownMenuItem(
+                                value: value,
+                                child: Text(key),
+                              ));
+                        })
+                        .values
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        print(value);
+                        dropdownValue = value as String?;
+                        Get.updateLocale(Locale(dropdownValue!));
+                        sharredPrefs!
+                            .setString("codeLang", dropdownValue.toString());
+                      });
+                    },
+                  ),
+                ),
+              ),
+            ],
           ),
           ListTile(
             onTap: () {
               Get.to(() => const ProfilePage());
             },
-            title: const Text("My Profile"),
+            title: Text("drawer1".tr),
             leading: const Icon(Icons.person),
           ),
           ListTile(
-            onTap: () {
-              Get.changeTheme(Themes.customLightTheme);
-            },
-            title: const Text("second page"),
+            onTap: () {},
+            title: Text("drawer2".tr),
             leading: const Icon(Icons.settings),
           ),
           ListTile(
-              onTap: () {
-                Get.changeTheme(Themes.customDarkTheme);
-              },
-              title: const Text("third page"),
+              onTap: () {},
+              title: Text("drawer3".tr),
               leading: const Icon(Icons.drafts_outlined)),
           ListTile(
             onTap: () {
               Get.to(() => const SplashScreen());
             },
-            title: const Text("Disconnect"),
+            title: Text("drawer4".tr),
             leading: const Icon(
               Icons.logout,
             ),
@@ -145,9 +211,9 @@ class _HomePageState extends State<HomePage> {
           )
         ],
         centerTitle: true,
-        title: const Text(
-          "Home page",
-          style: TextStyle(color: Colors.white),
+        title: Text(
+          "HomePage".tr,
+          style: const TextStyle(color: Colors.white),
         ),
       ),
       //backgroundColor: Colors.grey[100],

@@ -20,16 +20,16 @@ class _RegistrationPageState extends State<RegistrationPage> {
             const SizedBox(
               height: 80,
             ),
-            const Text(
-              "Lets Get Started !",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            Text(
+              "RegistrationPage1".tr,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
             const SizedBox(
               height: 10,
             ),
-            const Text(
-              "Create an account to open all the features",
-              style: TextStyle(color: Colors.grey),
+            Text(
+              "RegistrationPage2".tr,
+              style: const TextStyle(color: Colors.grey),
             ),
             const SizedBox(
               height: 50,
@@ -37,13 +37,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                  border: OutlineInputBorder(
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0))),
-                  labelText: "User name",
-                  prefixIcon: Icon(
+                  labelText: "RegistrationPage3".tr,
+                  prefixIcon: const Icon(
                     Icons.person,
                     color: Colors.orange,
                   ),
@@ -57,13 +57,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
                 keyboardType: TextInputType.emailAddress,
-                decoration: const InputDecoration(
-                    labelText: "Email address",
-                    border: OutlineInputBorder(
+                decoration: InputDecoration(
+                    labelText: "RegistrationPage4".tr,
+                    border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12))),
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                    prefixIcon: Icon(
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
+                    prefixIcon: const Icon(
                       Icons.email,
                       color: Colors.orange,
                     )),
@@ -76,17 +76,17 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
                 keyboardType: TextInputType.phone,
-                decoration: const InputDecoration(
-                  labelText: "Phone",
-                  border: OutlineInputBorder(
+                decoration: InputDecoration(
+                  labelText: "RegistrationPage5".tr,
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                   ),
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.phone_android_outlined,
                     color: Colors.orange,
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 ),
               ),
             ),
@@ -97,17 +97,17 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
                 obscureText: true,
-                decoration: const InputDecoration(
-                  labelText: "Password",
-                  prefixIcon: Icon(
+                decoration: InputDecoration(
+                  labelText: "RegistrationPage6".tr,
+                  prefixIcon: const Icon(
                     Icons.lock_person_rounded,
                     color: Colors.orange,
                   ),
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 ),
               ),
             ),
@@ -118,17 +118,17 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
                 obscureText: true,
-                decoration: const InputDecoration(
-                  labelText: "Confirm password",
-                  prefixIcon: Icon(
+                decoration: InputDecoration(
+                  labelText: "RegistrationPage7".tr,
+                  prefixIcon: const Icon(
                     Icons.lock_person_rounded,
                     color: Colors.orange,
                   ),
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 ),
               ),
             ),
@@ -136,43 +136,43 @@ class _RegistrationPageState extends State<RegistrationPage> {
               height: 30,
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                onPrimary: Colors.white,
-                elevation: 0,
-                shadowColor: Colors.transparent,
-                padding: const EdgeInsets.all(0),
-                shape: const RoundedRectangleBorder(
-                   borderRadius: BorderRadius.all(Radius.circular(12))
-                )
-              ),
-              onPressed: () {}, 
-              child: Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
-                  gradient: LinearGradient(colors: <Color>[Colors.deepOrange,Colors.orange])
-                ),
-                padding: const EdgeInsets.symmetric(horizontal: 70,vertical: 14),
-                child: const Text("Sign up",style: TextStyle(fontSize: 18),),
-            )
-            ),
-             Row(
+                style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.white,
+                    elevation: 0,
+                    shadowColor: Colors.transparent,
+                    padding: const EdgeInsets.all(0),
+                    shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)))),
+                onPressed: () {},
+                child: Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      gradient: LinearGradient(
+                          colors: <Color>[Colors.deepOrange, Colors.orange])),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 70, vertical: 14),
+                  child: Text(
+                    "RegistrationPage8".tr,
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                )),
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('You already have an accout ?'),
+                Text("RegistrationPage9".tr),
                 TextButton(
                   onPressed: () {
                     Get.to(() => const LogingScreen());
                   },
-                  child: const Text(
-                    "Log-in",
-                    style: TextStyle(
+                  child: Text(
+                    "RegistrationPage10".tr,
+                    style: const TextStyle(
                       color: Colors.orange,
                     ),
                   ),
                 ),
               ],
             ),
-            
           ],
         ),
       ),

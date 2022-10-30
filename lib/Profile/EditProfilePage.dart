@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class EditProfilePage extends StatelessWidget {
   const EditProfilePage({Key? key}) : super(key: key);
@@ -25,7 +26,8 @@ class EditProfilePage extends StatelessWidget {
                         height: 150,
                         width: 150,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(100)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(100)),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: NetworkImage(
@@ -61,14 +63,15 @@ class EditProfilePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text("First name",
-                        style:
-                            TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    Text("EditProfilePage1".tr,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18)),
                     const SizedBox(
                       height: 5,
                     ),
                     TextFormField(
-                      controller: TextEditingController(text: "first name"),
+                      controller:
+                          TextEditingController(text: "EditProfilePage2".tr),
                       decoration: const InputDecoration(
                           border: OutlineInputBorder(
                               borderRadius:
@@ -77,14 +80,15 @@ class EditProfilePage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Text("Last name",
-                        style:
-                            TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    Text("EditProfilePage3".tr,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18)),
                     const SizedBox(
                       height: 5,
                     ),
                     TextFormField(
-                      controller: TextEditingController(text: "last name"),
+                      controller:
+                          TextEditingController(text: "EditProfilePage4".tr),
                       decoration: const InputDecoration(
                           border: OutlineInputBorder(
                               borderRadius:
@@ -93,15 +97,15 @@ class EditProfilePage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Text("Phonr number",
-                        style:
-                            TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    Text("EditProfilePage5".tr,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18)),
                     const SizedBox(
                       height: 5,
                     ),
                     TextFormField(
                       keyboardType: TextInputType.phone,
-                      controller: TextEditingController(text: "05555555"),
+                      controller: TextEditingController(text: "+213"),
                       decoration: const InputDecoration(
                           border: OutlineInputBorder(
                               borderRadius:
@@ -110,30 +114,32 @@ class EditProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 35,),
-                ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(0),
-                onPrimary: Colors.white,
-                elevation: 0.0,
-                shadowColor: Colors.transparent,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
+              const SizedBox(
+                height: 35,
               ),
-              onPressed: () {
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 14),
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    gradient: LinearGradient(
-                        colors: <Color>[Colors.deepOrange, Colors.orange])),
-                child: const Text(
-                  "Confirm changes",
-                  style: TextStyle(fontSize: 18),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(0),
+                  onPrimary: Colors.white,
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                ),
+                onPressed: () {},
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 70, vertical: 14),
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      gradient: LinearGradient(
+                          colors: <Color>[Colors.deepOrange, Colors.orange])),
+                  child: Text(
+                    "EditProfilePage6".tr,
+                    style: TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
-            ),
             ],
           ),
         ),

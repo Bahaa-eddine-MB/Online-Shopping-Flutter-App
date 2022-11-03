@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AddProduct extends StatefulWidget {
   const AddProduct({Key? key}) : super(key: key);
@@ -8,14 +9,13 @@ class AddProduct extends StatefulWidget {
 }
 
 class _AddProductState extends State<AddProduct> {
-  @override
   List<String> myList = [
-    'House',
-    'Car',
-    'Clothe',
-    'Book',
-    'Electrical machine',
-    'HardWare'
+    "homeItems1".tr,
+    "homeItems2".tr,
+    "homeItems3".tr,
+    "homeItems4".tr,
+    "homeItems5".tr,
+    "homeItems6".tr
   ];
   String? dropdownValue;
   double currentValue = 10;
@@ -59,25 +59,25 @@ class _AddProductState extends State<AddProduct> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text("Title:",
+                  Text("addProd1".tr,
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                   const SizedBox(
                     height: 8,
                   ),
                   TextFormField(
-                    decoration: const InputDecoration(
-                        hintText: "Header",
-                        border: OutlineInputBorder(
+                    decoration: InputDecoration(
+                        hintText: "addProd2".tr,
+                        border: const OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10)))),
                   ),
                   const SizedBox(
                     height: 25,
                   ),
-                  const Text("Product type:",
+                  Text("addProd3".tr,
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                   const SizedBox(
                     height: 8,
                   ),
@@ -108,75 +108,70 @@ class _AddProductState extends State<AddProduct> {
                   const SizedBox(
                     height: 25,
                   ),
-                  const Text("Product Price :",
+                  Text("addProd4".tr,
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                   const SizedBox(
                     height: 8,
                   ),
                   TextFormField(
                     keyboardType: TextInputType.number,
-                    decoration: const InputDecoration(
-                        hintText: "Price",
+                    decoration: InputDecoration(
+                        hintText: "addProd5".tr,
                         suffixText: 'DA',
-                        border: OutlineInputBorder(
+                        border: const OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10)))),
                   ),
                   const SizedBox(
                     height: 25,
                   ),
-                  
-                  const Text("Condition :",
+                  Text("addProd6".tr,
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
-                            const SizedBox(
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                  const SizedBox(
                     height: 20,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children:const  [
-                        Text("Old"),
-                        Text("New")
-                      ],
+                      children: [Text("addProd7".tr), Text("addProd8".tr)],
                     ),
                   ),
                   SliderTheme(
                     data: SliderThemeData(
                       valueIndicatorColor: Colors.grey[300],
                       thumbColor: Colors.orange,
-                      
                     ),
                     child: Slider(
-                      activeColor: Colors.orange,
-                      inactiveColor: Colors.white,
-                      min: 0,
-                      divisions: 10,
-                      label: currentValue.round().toString(),
-                      value: currentValue, 
-                      max: 10,
-                      onChanged: (double value) {
-                        setState(() {
-                          currentValue = value;
-                        });
-                      }),
+                        activeColor: Colors.orange,
+                        inactiveColor: Colors.white,
+                        min: 0,
+                        divisions: 10,
+                        label: currentValue.round().toString(),
+                        value: currentValue,
+                        max: 10,
+                        onChanged: (double value) {
+                          setState(() {
+                            currentValue = value;
+                          });
+                        }),
                   ),
                   const SizedBox(
                     height: 25,
                   ),
-                  const Text("Product description :",
+                  Text("addProd9".tr,
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                   const SizedBox(
                     height: 8,
                   ),
                   TextFormField(
                     maxLines: 5,
-                    decoration: const InputDecoration(
-                        hintText: "Add a description",
-                        border: OutlineInputBorder(
+                    decoration: InputDecoration(
+                        hintText: "addProd10".tr,
+                        border: const OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10)))),
                   ),
@@ -203,9 +198,9 @@ class _AddProductState extends State<AddProduct> {
                               Colors.deepOrange,
                               Colors.orange
                             ])),
-                        child: const Text(
-                          "Post",
-                          style: TextStyle(fontSize: 18),
+                        child: Text(
+                          "addProd11".tr,
+                          style: const TextStyle(fontSize: 18),
                         ),
                       ),
                     ),

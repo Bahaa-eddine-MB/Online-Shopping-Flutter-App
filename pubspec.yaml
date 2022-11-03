@@ -37,6 +37,7 @@ dependencies:
   get: ^4.6.5
   lottie: ^1.4.2
   sticky_headers: ^0.3.0+2
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:

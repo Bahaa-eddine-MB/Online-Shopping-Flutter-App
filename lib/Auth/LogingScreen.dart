@@ -35,9 +35,9 @@ class _LogingScreenState extends State<LogingScreen> {
             const SizedBox(
               height: 60,
             ),
-            const Text(
-              "Welcome Back !",
-              style: TextStyle(
+            Text(
+              "LogingScreen1".tr,
+              style: const TextStyle(
                   color: Colors.orange,
                   fontSize: 25,
                   fontWeight: FontWeight.bold),
@@ -49,13 +49,13 @@ class _LogingScreenState extends State<LogingScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
                 keyboardType: TextInputType.emailAddress,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                  border: OutlineInputBorder(
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0))),
-                  labelText: "Email Address",
-                  prefixIcon: Icon(
+                  labelText: "LogingScreen2".tr,
+                  prefixIcon: const Icon(
                     Icons.email,
                     color: Colors.orange,
                   ),
@@ -70,11 +70,11 @@ class _LogingScreenState extends State<LogingScreen> {
                 child: TextFormField(
                   obscureText: !isVisible,
                   decoration: InputDecoration(
-                    contentPadding:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
                     border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12.0))),
-                    labelText: "Password",
+                    labelText: "LogingScreen3".tr,
                     prefixIcon: const Icon(
                       Icons.lock,
                       color: Colors.orange,
@@ -97,11 +97,11 @@ class _LogingScreenState extends State<LogingScreen> {
               padding: const EdgeInsets.only(left: 240),
               child: TextButton(
                 onPressed: () {
-                  Get.to(()=>const ForgetPasswordPage());
+                  Get.to(() => const ForgetPasswordPage());
                 },
-                child: const Text(
-                  "Forget Password?",
-                  style: TextStyle(
+                child: Text(
+                  "LogingScreen4".tr,
+                  style: const TextStyle(
                     color: Colors.grey,
                   ),
                 ),
@@ -120,31 +120,32 @@ class _LogingScreenState extends State<LogingScreen> {
                     borderRadius: BorderRadius.circular(10)),
               ),
               onPressed: () {
-                  Get.to(()=>const ConfirmPassword());
+                Get.to(() => const ConfirmPassword());
               },
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 14),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 70, vertical: 14),
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     gradient: LinearGradient(
                         colors: <Color>[Colors.deepOrange, Colors.orange])),
-                child: const Text(
-                  "Sign in",
-                  style: TextStyle(fontSize: 18),
+                child: Text(
+                  "LogingScreen5".tr,
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Dont have an accout ?'),
+                Text("LogingScreen6".tr),
                 TextButton(
                   onPressed: () {
                     Get.to(() => const RegistrationPage());
                   },
-                  child: const Text(
-                    "Sign up!",
-                    style: TextStyle(
+                  child: Text(
+                    "LogingScreen7".tr,
+                    style: const TextStyle(
                       color: Colors.orange,
                     ),
                   ),

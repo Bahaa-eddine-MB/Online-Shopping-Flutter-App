@@ -14,22 +14,21 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:    Container(
-                  height: 40,
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                  child: const TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Search for something',
-                      prefixIcon: Icon(Icons.search),
-                    ),
-                  ),
-                ),
-          
+        title: Container(
+          height: 40,
+          decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(10))),
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: "SearchPage1".tr,
+              prefixIcon: const Icon(Icons.search),
+            ),
+          ),
+        ),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
-      body: const Center(child: Text("search for something")),
+      body: Center(child: Text("SearchPage1".tr)),
     );
   }
 }

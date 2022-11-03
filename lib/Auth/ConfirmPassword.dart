@@ -24,7 +24,7 @@ class _ConfirmPasswordState extends State<ConfirmPassword> {
             const SizedBox(
               height: 40,
             ),
-           const  Text("We have sent you a verification email\ncheck your inbox",style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 20),textAlign: TextAlign.center,),
+              Text("ConfirmPassword1".tr,style: const TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 20),textAlign: TextAlign.center,),
            const SizedBox(
             height: 30,
            ),
@@ -47,7 +47,7 @@ class _ConfirmPasswordState extends State<ConfirmPassword> {
                   gradient: LinearGradient(colors: <Color>[Colors.deepOrange,Colors.orange])
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 70,vertical: 14),
-                child: const Text("Resend",style: TextStyle(fontSize: 18),),
+                child:   Text("ConfirmPassword2".tr,style: const TextStyle(fontSize: 18),),
             )
             ),
           ],

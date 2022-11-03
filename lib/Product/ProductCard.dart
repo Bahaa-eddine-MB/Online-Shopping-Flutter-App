@@ -46,33 +46,33 @@ class PostCard extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text('Price :',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    SizedBox(
+                  children: [
+                    Text("addProd5".tr,
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text('1000000000 Da'),
-                    SizedBox(
+                    const Text('1000000000 Da'),
+                    const SizedBox(
                       height: 10,
                     ),
-                    Text('Condition:',
+                    const Text('Condition:',
                         style: TextStyle(fontWeight: FontWeight.bold)),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text('New'),
-                    SizedBox(
+                    const Text('New'),
+                    const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       "Description:",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text('some description ...\nalso some text')
+                    const Text('some description ...\nalso some text')
                   ],
                 ),
               )

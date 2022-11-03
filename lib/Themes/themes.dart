@@ -1,22 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:products_application/Themes/colors.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class Themes extends GetxController{
- 
+import '../main.dart';
 
-  static ThemeData customLightTheme = ThemeData(
-      primaryColor: Colors.orange,
-      primarySwatch: Colors.orange,
-      scaffoldBackgroundColor: Colors.grey[100]);
-  static ThemeData customDarkTheme = ThemeData(
-      colorScheme: const  ColorScheme.dark(
-       primary: Colors.orange, 
-       secondary: Colors.orange
-      ),
-      appBarTheme: const AppBarTheme(backgroundColor: Colors.orange),
-      primaryColor: Colors.orange,
-      primarySwatch: Colors.orange,
-      );
+class Themes extends GetxController {
+  static ThemeData customLightTheme = ThemeData.light().copyWith(
+      colorScheme: const ColorScheme.light()
+          .copyWith(primary: orangeColor, secondary: orangeColor),
+      appBarTheme: const AppBarTheme(backgroundColor: orangeColor),
+      primaryColor: orangeColor,
+      floatingActionButtonTheme:
+          const FloatingActionButtonThemeData(backgroundColor: orangeColor),
+      scaffoldBackgroundColor: lightBackgroundColor);
 
+  static ThemeData customDarkTheme = ThemeData.dark().copyWith(
+    scaffoldBackgroundColor: darkBackgroundColor,
+    colorScheme: const ColorScheme.dark()
+        .copyWith(primary: orangeColor, secondary: orangeColor),
+    appBarTheme: const AppBarTheme(backgroundColor: orangeColor),
+    primaryColor: orangeColor,
+    floatingActionButtonTheme:
+        const FloatingActionButtonThemeData(backgroundColor: orangeColor),
+  );
 
-}
+  static ThemeData getThemeMode() {
+    return sharredPrefs!.getBool("isDarkTheme") ?? false
+        ? Themes.customDarkTheme
+        : Themes.customLightTheme;
+  }
+
+ }

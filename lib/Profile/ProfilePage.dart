@@ -26,8 +26,8 @@ class _ProfilePageState extends State<ProfilePage> {
               child: Stack(
                 children: [
                   GestureDetector(
-                    onTap: (){
-                      Get.to(()=> const EditProfilePage());
+                    onTap: () {
+                      Get.to(() => const EditProfilePage());
                     },
                     child: Container(
                       height: 150,
@@ -45,16 +45,17 @@ class _ProfilePageState extends State<ProfilePage> {
                     bottom: 0,
                     right: 0,
                     child: Container(
-                      decoration:const  BoxDecoration(
-                        color: Colors.transparent,
-                        shape: BoxShape.circle
-                      ),
-                      padding:const EdgeInsets.all(4),
+                      decoration: const BoxDecoration(
+                          color: Colors.transparent, shape: BoxShape.circle),
+                      padding: const EdgeInsets.all(4),
                       child: const CircleAvatar(
-                        radius: 18,
-                        backgroundColor: Colors.orange,
-                        child: Icon(Icons.edit,size: 25,color: Colors.white,)
-                      ),
+                          radius: 18,
+                          backgroundColor: Colors.orange,
+                          child: Icon(
+                            Icons.edit,
+                            size: 25,
+                            color: Colors.white,
+                          )),
                     ),
                   )
                 ],
@@ -87,9 +88,9 @@ class _ProfilePageState extends State<ProfilePage> {
                         Icons.phone,
                         color: Colors.white,
                       ),
-                      label: const Text(
-                        "Call",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      label: Text(
+                        "ProfilPage1".tr,
+                        style: const TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
                     const SizedBox(
@@ -107,9 +108,9 @@ class _ProfilePageState extends State<ProfilePage> {
                         Icons.mail,
                         color: Colors.white,
                       ),
-                      label: const Text(
-                        "Mail",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      label: Text(
+                        "ProfilPage2".tr,
+                        style: const TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
                   ],
@@ -123,13 +124,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Column(
-                        children: const [
-                          Text(
+                        children: [
+                          const Text(
                             "400",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
-                          Text("Products", style: TextStyle(fontSize: 12)),
+                          Text("ProfilPage3".tr,
+                              style: const TextStyle(fontSize: 12)),
                         ],
                       ),
                       const VerticalDivider(
@@ -137,13 +139,14 @@ class _ProfilePageState extends State<ProfilePage> {
                         thickness: 1,
                       ),
                       Column(
-                        children: const [
-                          Text(
+                        children: [
+                          const Text(
                             "200",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
-                          Text("Sells", style: TextStyle(fontSize: 12)),
+                          Text("ProfilPage4".tr,
+                              style: const TextStyle(fontSize: 12)),
                         ],
                       ),
                       const VerticalDivider(
@@ -151,13 +154,13 @@ class _ProfilePageState extends State<ProfilePage> {
                         thickness: 1,
                       ),
                       Column(
-                        children: const [
-                          Text(
+                        children:   [
+                          const Text(
                             "100",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
-                          Text("Followers", style: TextStyle(fontSize: 12)),
+                          Text("ProfilPage5".tr, style: const TextStyle(fontSize: 12)),
                         ],
                       ),
                     ],
